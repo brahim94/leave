@@ -11,8 +11,26 @@
                         <xpath expr="//field[@name='state']" position="before">
                          <button name="print_leave_request" string="Imprimer la demande" type="object" class="oe_highlight"/>
                         </xpath>
+                        <xpath expr="//field[@name='employee_id']" position="after">
+                         <field name="interim_employee"/>
+                        </xpath>
                         </field>
         </record>
+
+        <record id="view_leave_request_manager_inherit" model="ir.ui.view">
+                        <field name="name">leave.request.form.manager.inherit</field>
+                        <field name="model">hr.leave</field>
+                        <field name="inherit_id" ref="hr_holidays.hr_leave_view_form_manager"/>
+                        <field name="arch" type="xml">
+                            <xpath expr="//field[@name='employee_id']" position="after">
+                            <field name="interim_employee"/>
+                            <field name="ville" invisible="1"/>
+                            <field name="matricule_employee" invisible="1"/>
+                            <field name="phone_number" invisible="1"/>
+                            </xpath>
+                            </field>
+        </record>
+
 
     </data>
 

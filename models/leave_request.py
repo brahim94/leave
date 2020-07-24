@@ -8,5 +8,22 @@ class Leave_request(models.Model):
     _inherit = 'hr.leave'
     _description = 'Demande de congé'
 
-def print_leave_request(self):
-        return self.env.ref('tech_leave.action_report_leave').report_action(self)
+    
+    phone_number = fields.Char(string='N° Téléphone')
+    ville = fields.Char(string='Ville')
+    matricule_employee = fields.Many2one('hr.job', string="Matricule")
+    interim_employee = fields.Many2one('hr.employee', string="Employé en intérim")
+
+    @api.onchange('employee_id')
+    def onchange_employee_id(self):
+        self.phone_number = self.employee_id.mobile_phone
+        self.ville = self.employee_id.work_location
+        self.matricule_employee = self.employee_id.job_id
+        
+
+
+
+    def print_leave_request(self):
+            return self.env.ref('tech_leave.action_report_leave').report_action(self)
+
+    

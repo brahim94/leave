@@ -1,0 +1,3 @@
+[2020-07-24 12:16:52.482] [sharedprocess] [info] main {"machineId":"83a191897c324716b820178e5819cf0db681c2bf4b4cf198f167d6b73c902b71","windowId":2}
+[2020-07-24 12:16:53.612] [sharedprocess] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/usr/lib/python3/dist-packages/odoo/addons/tech_leave/vscode-root/User/snippets'
+[2020-07-24 12:17:32.867] [sharedprocess] [info] Starting to clean up unused language packs.

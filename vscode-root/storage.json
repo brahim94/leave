@@ -1,0 +1,22 @@
+{
+    "telemetry.machineId": "83a191897c324716b820178e5819cf0db681c2bf4b4cf198f167d6b73c902b71",
+    "openedPathsList": {
+        "workspaces3": [],
+        "files2": []
+    },
+    "windowsState": {
+        "lastActiveWindow": {
+            "backupPath": "/usr/lib/python3/dist-packages/odoo/addons/tech_leave/vscode-root/Backups/1595618200494",
+            "uiState": {
+                "mode": 1,
+                "x": 171,
+                "y": 57,
+                "width": 1024,
+                "height": 711
+            }
+        },
+        "openedWindows": []
+    },
+    "theme": "vs-dark",
+    "themeBackground": "#1e1e1e"
+}
