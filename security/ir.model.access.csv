@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_tech_leave_tech_leave,tech_leave.tech_leave,model_tech_leave_tech_leave,base.group_user,1,1,1,1
