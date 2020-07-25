@@ -15,80 +15,71 @@
 			<t t-foreach="docs" t-as="o">
 			<t t-call="web.external_layout">
 
-			 <style>
-                table, th, td {
-                border: 1px solid black;
-                border-collapse: collapse;
-                }
-                th, td {
-                padding: 1px;
-                text-align: left;    
-                }
-                </style>
 
         <div style="position:absolute;left:230px;top:50.62px;text-align:center">
-			 <h4><u>DEMANDE DE DEPART EN CONGE </u></h4>
-             <p class="cls_009">(Année <span t-field="o.request_date_from" t-options='{"format": "yyyy"}'/>)</p>
+			 <h4><u><strong>DEMANDE DE DEPART EN CONGE</strong> </u></h4>
+             <p class="cls_009"><u>(Année <span t-field="o.request_date_from" t-options='{"format": "yyyy"}'/>)</u></p>
         </div>
 
-								<table style="position:absolute;top:100.62px;width:50%">
+								<table style="position:absolute;top:140.62px;width:55%">
                                         <tr>
                                             <th width="35%">Nom et Prénome :</th>
-                                            <td width="65%"><span t-field="o.employee_id"/></td>
+                                            <td style="bottom;border-bottom: none;padding:10px; margin:10px;width:70%"><span t-field="o.employee_id"/></td>
                                         </tr>
 
                                         <tr>
                                             <th width="35%">Direction :</th>
-                                            <td width="65%"><span t-field="o.department_id"/></td>
+                                            <td style="bottom;border-bottom: none;padding:10px; margin:10px;width:70%"><span t-field="o.department_id"/></td>
                                         </tr>
 
                                         <tr>
                                             <th width="35%">Ville :</th>
-                                            <td width="65%"><span t-field="o.ville"/></td>
+                                            <td style="bottom;border-bottom: none;padding:10px; margin:10px;width:70%"><span t-field="o.ville"/></td>
                                         </tr>
 										<tr>
                                             <th width="35%">Matricule :</th>
-                                            <td width="65%"><span t-field="o.matricule_employee"/></td>
+                                            <td style="bottom;border-bottom: none;padding:10px; margin:10px;width:70%"><span t-field="o.matricule_employee"/></td>
                                         </tr>
 														
                                 </table>
 								<table style="position:absolute;top:320.62px;width:100%">
 								
 									<tr>
-										<th style="text-align: bottom;width:22%" rowspan="2">Dates </th>
-										<th width="22%">Départ :</th>
-										<td><span t-field="o.request_date_from"/></td>
-										<th width="33%" rowspan="2">Jours Ouvrables : </th>
-										<td rowspan="2"><span t-field="o.number_of_days"/>(Dimanche jour de repos)</td>
+										<th style="text-align: bottom;width:20.5%" rowspan="2">Dates </th>
+										<th width="18%">Départ :</th>
+										<td style="bottom;border-bottom: none;padding:10px; margin:10px"><span t-field="o.request_date_from"/></td>
+										<th rowspan="2">Jours Ouvrables : </th>
+										<td style="bottom;border-bottom: none;padding:10px; margin:10px" rowspan="2"><span t-field="o.number_of_days"/><small>  (Dimanche jour de repos)</small></td>
 									</tr>
 									<tr>
-										<th width="33%">Retour :</th>
-										<td><span t-field="o.request_date_to"/></td>
+										<th width="18%">Retour :</th>
+										<td style="bottom;border-bottom: none;padding:10px; margin:10px"><span t-field="o.request_date_to"/></td>
 									</tr>
 									<tr>
-                                            <th width="35%">Intérim assuré par : </th>
-                                            <td width="33%"><span t-field="o.interim_employee"/></td>
+                                            <th width="18%">Intérim assuré par : </th>
+                                            <td style="bottom;border-bottom: none;padding:10px; margin:10px"><span t-field="o.interim_employee"/></td>
                                         </tr>
 										<tr>
-                                            <th width="35%" colspan="2">Téléphone personnel ou n° du portable :  </th>
-                                            <td width="65%"><span t-field="o.phone_number"/></td>
+                                            <th colspan="2">Téléphone personnel ou n° du portable :  </th>
+                                            <td style="bottom;border-bottom: none;padding:10px; margin:10px"><span t-field="o.phone_number"/></td>
                                         </tr>					
 								</table>
 
 
-								<table style="position:absolute;top:540.62px;width:100%">
+								<table style="position:absolute;top:540.62px;border: 1px solid black;border-collapse: collapse;width:100%">
+                                
                                 <tr style="text-align: center;background-color: #e8e6e6;color: black">
-                                    <th style="text-align: center">Signature du demandeur</th>
-                                    <th style="text-align: center">Validation hiérarchie</th>
-                                    <th style="text-align: center">Validation direction concernée</th>
-                                    <th style="text-align: center">Validation direction RH</th>
+                                    <th style="border: 1px solid black;border-collapse: collapse;text-align: center;padding:5px; margin:100px">Signature du demandeur</th>
+                                    <th style="border: 1px solid black;border-collapse: collapse;text-align: center;padding:5px; margin:100px">Validation hiérarchie</th>
+                                    <th style="border: 1px solid black;border-collapse: collapse;text-align: center;padding:5px; margin:100px">Validation direction concernée</th>
+                                    <th style="border: 1px solid black;border-collapse: collapse;text-align: center;padding:5px; margin:100px">Validation direction RH</th>
                                 </tr>
 
                                 <tr>
-                                    <td style="text-align: top;border-bottom: none;padding:30px; margin:0px">Date : __/___/__</td>           
-                                    <td style="text-align: bottom;border-bottom: none;padding:30px; margin:0px">Date : __/___/__</td>
-                                    <td style="text-align: bottom;border-bottom: none;padding:30px; margin:0px">Date : __/___/__</td>
-                                    <td style="text-align: bottom;border-bottom: none;padding:30px; margin:0px">Date : __/___/__</td>
+                                    <td style="height:100px;vertical-align:bottom;border: 1px solid black;border-collapse: collapse;border-bottom: none">Date : __/___/__</td>           
+                                    <td style="height:100px;vertical-align:bottom;border: 1px solid black;border-collapse: collapse;border-bottom: none">Date : __/___/__</td>
+                                    <td style="height:100px;vertical-align:bottom;border: 1px solid black;border-collapse: collapse;border-bottom: none">Date : __/___/__</td>
+                                    <td style="height:100px;vertical-align:bottom;border: 1px solid black;border-collapse: collapse;border-bottom: none">Date : __/___/__</td>
                                 </tr>
                             </table>
 
@@ -96,14 +87,14 @@
 									<span class="cls_004">Rappel : </span>
 							</div>
 
-							<div style="position:absolute;left:70.82px;top:840px" class="cls_004">
-									<span class="cls_004">-	 Les congés doivent être épuisés en totalité dans l’année ;</span>
-									<span class="cls_004">-	 Toute demande doit parvenir au DRH, 30 jours à l’avance pour exploitation ;</span>
-									<span class="cls_004">-	 Cette décision de congé devra après visa de la DIRECTION, être remise au collaborateur <p>avant son départ en congé</p></span>
+							<div style="position:absolute;left:70.82px;top:740px" class="cls_004">
+									<p class="cls_004">-	 Les congés doivent être épuisés en totalité dans l’année ;</p>
+									<p class="cls_004">-	 Toute demande doit parvenir au DRH, 30 jours à l’avance pour exploitation ;</p>
+									<p class="cls_004">-	 Cette décision de congé devra après visa de la DIRECTION, être remise au collaborateur <br>avant son départ en congé;</br></p>
 							</div>
 
 							<div style="position:absolute;top:900px" class="cls_004">
-									<span class="cls_004">LE RESPECT DE LA VALIDATION DE LA DEMANDE EST OBLIGATOIRE FAUTE DE QUOI L’ABSCENCE SERA <p> CONSIDEREE COMME « Abandon de poste » conformément au code du travail en vigueur.</p></span>
+									<span class="cls_004">LE RESPECT DE LA VALIDATION DE LA DEMANDE EST OBLIGATOIRE FAUTE DE QUOI L’ABSCENCE SERA <p> CONSIDEREE COMME <small>« Abandon de poste » conformément au code du travail en vigueur.</small></p></span>
 							</div>
 						
         
